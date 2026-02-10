@@ -7,8 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
-            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)), 
-                              url('bg.jpg');
+            background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), url('bg.jpg');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
@@ -20,17 +19,17 @@
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s ease;
         }
 
         .glass-card:hover { 
-            transform: translateY(-8px); 
-            border-color: rgba(245, 158, 11, 0.5);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transform: translateY(-10px); 
+            border-color: rgba(245, 158, 11, 0.4);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
         }
 
         .gradient-text {
@@ -52,11 +51,17 @@
             background: linear-gradient(to right, #f59e0b, transparent);
         }
 
-        .btn-glow {
-            box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+        /* IG 專屬色系線條 */
+        .section-line-ig {
+            height: 2px;
+            flex-grow: 1;
+            background: linear-gradient(to right, #d946ef, transparent);
         }
-        .btn-glow:hover {
-            box-shadow: 0 0 30px rgba(245, 158, 11, 0.6);
+
+        .instagram-media {
+            min-width: 100% !important;
+            border-radius: 12px !important;
+            margin: 0 !important;
         }
     </style>
 </head>
@@ -64,21 +69,25 @@
 
     <nav class="sticky top-0 z-50 p-6 flex justify-between items-center max-w-7xl mx-auto backdrop-blur-md">
         <h1 class="text-2xl font-bold tracking-tighter italic text-white uppercase">shishi<span class="text-amber-500">lion</span></h1>
-        <div class="hidden md:flex space-x-8 text-sm font-medium">
-            <a href="#long-video" class="hover:text-amber-400 transition">長片作品</a>
-            <a href="#shorts-video" class="hover:text-amber-400 transition">Shorts作品</a>
-            <a href="#pricing" class="hover:text-amber-400 transition">委託報價</a>
-            <a href="https://discordapp.com/users/ss1986" target="_blank" class="bg-amber-600 px-6 py-2 rounded-full hover:bg-amber-700 transition shadow-lg text-white font-bold btn-glow">立即私訊</a>
+        <div class="hidden md:flex space-x-8 text-sm font-medium items-center">
+            <a href="#long-video" class="hover:text-amber-400 transition">長片</a>
+            <a href="#shorts-video" class="hover:text-amber-400 transition">Shorts</a>
+            <a href="#ig-video" class="hover:text-pink-400 transition">Instagram</a>
+            <a href="#pricing" class="hover:text-amber-400 transition">報價</a>
+            <a href="https://discordapp.com/users/ss1986" target="_blank" class="bg-amber-600 px-6 py-2 rounded-full hover:bg-amber-700 transition shadow-lg text-white font-bold">私訊委託</a>
         </div>
     </nav>
 
-    <header class="py-24 text-center px-4">
-        <h2 class="text-5xl md:text-6xl font-black mb-8 tracking-tight drop-shadow-2xl leading-tight">
-            我是一名正在<br><span class="gradient-text">自學剪輯的初學者</span>
+    <header class="py-24 text-center px-4 max-w-5xl mx-auto">
+        <div class="mb-8 relative inline-block">
+            <div class="absolute -inset-1 bg-amber-500 rounded-full blur opacity-30 animate-pulse"></div>
+            <img src="avatar.jpg" alt="獅淼" class="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-amber-500/50 object-cover mx-auto">
+        </div>
+        <h2 class="text-5xl md:text-6xl font-black mb-8 tracking-tight leading-tight">
+            剪輯<span class="gradient-text">初學者</span>的作品集
         </h2>
-        <p class="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed drop-shadow-md">
-            目前專注於遊戲精華與短影音製作，<br>
-            以實惠的價格提供服務，期待與您的作品一同成長。
+        <p class="text-gray-400 text-lg md:text-xl font-light max-w-2xl mx-auto">
+            專注遊戲精華與短影音製作，目前以實惠價格累積經驗中。
         </p>
     </header>
 
@@ -86,29 +95,27 @@
 
         <section id="long-video" class="py-16">
             <div class="section-title">
-                <h3 class="text-3xl font-bold">長片精華 <span class="text-amber-500 text-lg ml-2">Long Form</span></h3>
+                <h3 class="text-3xl font-bold italic">Long Form</h3>
                 <div class="section-line"></div>
             </div>
             
             <div class="grid lg:grid-cols-2 gap-10">
                 <div class="glass-card rounded-3xl overflow-hidden">
                     <div class="aspect-video">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/PzNcNuJZf3I" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/PzNcNuJZf3I" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="p-8">
-                        <span class="text-amber-500 text-xs font-bold tracking-widest uppercase">長片精華 / NT.200 min</span>
-                        <h4 class="font-bold text-xl mt-2 mb-3">【阿秉精華】在工商現場太大聲吵到仁勳!?</h4>
-                        <p class="text-gray-400 text-sm italic">Software: Premiere Pro</p>
+                        <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">阿秉精華</span>
+                        <h4 class="font-bold text-xl mt-2">在工商現場太大聲吵到仁勳!?</h4>
                     </div>
                 </div>
                 <div class="glass-card rounded-3xl overflow-hidden">
                     <div class="aspect-video">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/GIwYaqRaVjo" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/GIwYaqRaVjo" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="p-8">
-                        <span class="text-amber-500 text-xs font-bold tracking-widest uppercase">長片精華 / NT.200 min</span>
-                        <h4 class="font-bold text-xl mt-2 mb-3">【阿秉精華】打從娘胎沒說過謊 你們為啥不信我</h4>
-                        <p class="text-gray-400 text-sm italic">Software: Premiere Pro</p>
+                        <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">阿秉精華</span>
+                        <h4 class="font-bold text-xl mt-2">打從娘胎沒說過謊 你們為啥不信我</h4>
                     </div>
                 </div>
             </div>
@@ -116,91 +123,72 @@
 
         <section id="shorts-video" class="py-16">
             <div class="section-title">
-                <h3 class="text-3xl font-bold">Shorts 短影音 <span class="text-amber-500 text-lg ml-2">Shorts</span></h3>
+                <h3 class="text-3xl font-bold italic">Shorts</h3>
                 <div class="section-line"></div>
             </div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <div class="aspect-[9/16]"><iframe class="w-full h-full" src="https://www.youtube.com/embed/UV87VXsEerQ" frameborder="0" allowfullscreen></iframe></div>
+                    <div class="p-4 text-center text-sm font-bold">場內打到場外</div>
+                </div>
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <div class="aspect-[9/16]"><iframe class="w-full h-full" src="https://www.youtube.com/embed/5ZcH6PFZl_8" frameborder="0" allowfullscreen></iframe></div>
+                    <div class="p-4 text-center text-sm font-bold">感情不會散</div>
+                </div>
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <div class="aspect-[9/16]"><iframe class="w-full h-full" src="https://www.youtube.com/embed/Nd_bFPESOeU" frameborder="0" allowfullscreen></iframe></div>
+                    <div class="p-4 text-center text-sm font-bold">高金生會有報應</div>
+                </div>
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <div class="aspect-[9/16]"><iframe class="w-full h-full" src="https://www.youtube.com/embed/PPm9hBXNWUw" frameborder="0" allowfullscreen></iframe></div>
+                    <div class="p-4 text-center text-sm font-bold">很明顯我開了</div>
+                </div>
+            </div>
+        </section>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-card rounded-2xl overflow-hidden text-center">
-                    <div class="aspect-[9/16]">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/UV87VXsEerQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <section id="ig-video" class="py-20 px-8 rounded-[3rem] bg-gradient-to-br from-purple-900/10 to-pink-900/10 border border-pink-500/20 my-10">
+            <div class="section-title">
+                <h3 class="text-3xl font-bold italic text-pink-500">Instagram</h3>
+                <div class="section-line-ig"></div>
+            </div>
+            <div class="flex justify-center">
+                <div class="w-full max-w-[350px] glass-card rounded-3xl overflow-hidden">
+                    <div class="p-2">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSbXGSbjcz1/" data-instgrm-version="14"></blockquote>
                     </div>
-                    <div class="p-4">
-                        <h5 class="font-bold text-sm truncate">場內打到場外 #apex</h5>
-                        <p class="text-amber-500 text-xs mt-1 font-bold">NT.350 / 部</p>
-                    </div>
-                </div>
-                <div class="glass-card rounded-2xl overflow-hidden text-center">
-                    <div class="aspect-[9/16]">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/5ZcH6PFZl_8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h5 class="font-bold text-sm truncate">一人一顆閃光彈 感情不會散</h5>
-                        <p class="text-amber-500 text-xs mt-1 font-bold">NT.350 / 部</p>
-                    </div>
-                </div>
-                <div class="glass-card rounded-2xl overflow-hidden text-center">
-                    <div class="aspect-[9/16]">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/Nd_bFPESOeU" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h5 class="font-bold text-sm truncate">高金生 是會有報應的!!!</h5>
-                        <p class="text-amber-500 text-xs mt-1 font-bold">NT.350 / 部</p>
-                    </div>
-                </div>
-                <div class="glass-card rounded-2xl overflow-hidden text-center">
-                    <div class="aspect-[9/16]">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/PPm9hBXNWUw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h5 class="font-bold text-sm truncate">很明顯我開了 #shorts</h5>
-                        <p class="text-amber-500 text-xs mt-1 font-bold">NT.350 / 部</p>
+                    <div class="p-6 text-center bg-black/20">
+                        <h4 class="font-bold text-pink-400">PUBG 絕地求生</h4>
+                        <p class="text-xs text-gray-400 mt-1">Reels 影音製作</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="pricing" class="py-24">
-            <h3 class="text-4xl font-bold mb-16 text-center">委託報價 Service</h3>
+            <h3 class="text-4xl font-bold mb-16 text-center">委託報價</h3>
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="glass-card p-10 rounded-[2.5rem] border-t border-white/20 text-center">
+                <div class="glass-card p-10 rounded-[2.5rem] text-center border-t-2 border-amber-500/30">
                     <h4 class="text-xl font-bold text-amber-500 mb-4">長影片精華</h4>
-                    <div class="mb-6">
-                        <span class="text-4xl font-black">NT$ 200</span>
-                        <span class="text-gray-400 text-sm">/ 每分鐘成品</span>
-                    </div>
-                    <ul class="text-left text-sm text-gray-300 space-y-3">
-                        <li>• 綜藝字卡、動態特效設計</li>
-                        <li>• 專業轉場與 BGM 編排</li>
-                        <li>• 軟體：Premiere Pro</li>
-                    </ul>
+                    <div class="mb-6"><span class="text-4xl font-black">NT$ 200</span><span class="text-gray-400 text-sm"> / 分鐘</span></div>
+                    <p class="text-sm text-gray-400 leading-relaxed">綜藝字卡、動態特效、專業轉場與 BGM 編排。</p>
                 </div>
-                <div class="glass-card p-10 rounded-[2.5rem] border-t border-amber-500/50 text-center relative">
-                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-500 text-black text-[10px] font-black px-4 py-1 rounded-full">新人優惠</div>
-                    <h4 class="text-xl font-bold text-amber-500 mb-4">Shorts 短影音</h4>
-                    <div class="mb-6">
-                        <span class="text-4xl font-black">NT$ 350</span>
-                        <span class="text-gray-400 text-sm">/ 每部</span>
-                    </div>
-                    <ul class="text-left text-sm text-gray-300 space-y-3">
-                        <li>• 快速節奏、高吸睛度剪輯</li>
-                        <li>• 包含重點字幕與音效</li>
-                        <li>• 軟體：Premiere Pro</li>
-                    </ul>
+                <div class="glass-card p-10 rounded-[2.5rem] text-center border-t-2 border-pink-500/30">
+                    <h4 class="text-xl font-bold text-pink-500 mb-4">Shorts / Reels</h4>
+                    <div class="mb-6"><span class="text-4xl font-black">NT$ 350</span><span class="text-gray-400 text-sm"> / 每部</span></div>
+                    <p class="text-sm text-gray-400 leading-relaxed">快速節奏、高吸睛度剪輯，包含重點字幕與音效。</p>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer id="contact" class="py-24 text-center px-6 border-t border-white/10">
-        <h3 class="text-3xl font-bold mb-6">準備好開始合作了嗎？</h3>
-        <p class="mb-10 text-gray-400 font-medium">Discord ID: <span class="text-white bg-white/10 px-3 py-1 rounded">ss1986</span></p>
-        <a href="https://discordapp.com/users/ss1986" target="_blank" class="inline-block bg-white text-black px-12 py-4 rounded-full font-bold hover:bg-amber-500 hover:text-white transition-all transform hover:scale-110 shadow-xl">
-            立即私訊委託
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="mb-6 text-gray-500">Discord ID: <span class="text-white">ss1986</span></p>
+        <a href="https://discordapp.com/users/ss1986" target="_blank" class="bg-white text-black px-10 py-3 rounded-full font-black hover:bg-amber-500 hover:text-white transition-all transform hover:scale-105 shadow-xl">
+            START PROJECT
         </a>
-        <p class="mt-20 text-gray-600 text-[10px] tracking-widest uppercase">© 2026 SHISHILION · All Rights Reserved.</p>
     </footer>
 
+    <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
