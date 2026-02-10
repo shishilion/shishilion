@@ -8,80 +8,39 @@
     <style>
         body { 
             background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), url('bg.jpg');
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            background-color: #0f172a;
-            color: white; 
-            font-family: 'Microsoft JhengHei', 'PingFang TC', sans-serif;
-            margin: 0;
+            background-attachment: fixed; background-size: cover; background-position: center;
+            background-color: #0f172a; color: white; font-family: 'Microsoft JhengHei', sans-serif;
             scroll-behavior: smooth;
         }
-
         .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1); transition: 0.3s ease;
         }
-
-        .glass-card:hover { 
-            transform: translateY(-10px); 
-            border-color: rgba(245, 158, 11, 0.4);
-            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
-        }
-
-        .gradient-text {
-            background: linear-gradient(to right, #fbbf24, #f59e0b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .section-line {
-            height: 2px;
-            flex-grow: 1;
-            background: linear-gradient(to right, #f59e0b, transparent);
-        }
-
-        /* IG 專屬色系線條 */
-        .section-line-ig {
-            height: 2px;
-            flex-grow: 1;
-            background: linear-gradient(to right, #d946ef, transparent);
-        }
-
-        .instagram-media {
-            min-width: 100% !important;
-            border-radius: 12px !important;
-            margin: 0 !important;
-        }
+        .glass-card:hover { transform: translateY(-8px); border-color: #f59e0b; }
+        .gradient-text { background: linear-gradient(to right, #fbbf24, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { display: flex; align-items: center; gap: 1rem; margin-bottom: 2.5rem; }
+        .section-line { height: 2px; flex-grow: 1; background: linear-gradient(to right, #f59e0b, transparent); }
+        .section-line-ig { height: 2px; flex-grow: 1; background: linear-gradient(to right, #d946ef, transparent); }
+        .full-title { word-break: break-word; overflow: visible; white-space: normal; }
     </style>
 </head>
 <body>
 
-    <nav class="sticky top-0 z-50 p-6 flex justify-between items-center max-w-7xl mx-auto backdrop-blur-md">
-        <h1 class="text-2xl font-bold tracking-tighter italic text-white uppercase">shishi<span class="text-amber-500">lion</span></h1>
+    <nav class="sticky top-0 z-50 p-6 flex justify-between items-center max-w-7xl mx-auto backdrop-blur-md border-b border-white/5">
+        <h1 class="text-2xl font-bold tracking-tighter italic uppercase">shishi<span class="text-amber-500">lion</span></h1>
         <div class="hidden md:flex space-x-8 text-sm font-medium items-center">
             <a href="#long-video" class="hover:text-amber-400 transition">長片</a>
             <a href="#shorts-video" class="hover:text-amber-400 transition">Shorts</a>
             <a href="#ig-video" class="hover:text-pink-400 transition">Instagram</a>
             <a href="#pricing" class="hover:text-amber-400 transition">報價</a>
-            <a href="https://discordapp.com/users/ss1986" target="_blank" class="bg-amber-600 px-6 py-2 rounded-full hover:bg-amber-700 transition shadow-lg text-white font-bold">私訊委託</a>
+            <a href="https://discordapp.com/users/ss1986" target="_blank" class="bg-amber-600 px-6 py-2 rounded-full hover:bg-amber-700 transition shadow-lg font-bold">私訊委託</a>
         </div>
     </nav>
 
     <header class="py-24 text-center px-4 max-w-5xl mx-auto">
         <div class="mb-8 relative inline-block">
             <div class="absolute -inset-1 bg-amber-500 rounded-full blur opacity-30 animate-pulse"></div>
-            <img src="avatar.jpg" alt="獅淼" class="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-amber-500/50 object-cover mx-auto">
+            <img src="avatar.jpg" alt="獅淼" class="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-amber-500/50 object-cover mx-auto shadow-2xl">
         </div>
         <h2 class="text-5xl md:text-6xl font-black mb-8 tracking-tight leading-tight">
             剪輯<span class="gradient-text">初學者</span>的作品集
@@ -95,27 +54,22 @@
 
         <section id="long-video" class="py-16">
             <div class="section-title">
-                <h3 class="text-3xl font-bold italic">Long Form</h3>
+                <h3 class="text-3xl font-bold italic uppercase tracking-wider">Long Form</h3>
                 <div class="section-line"></div>
             </div>
-            
             <div class="grid lg:grid-cols-2 gap-10">
-                <div class="glass-card rounded-3xl overflow-hidden">
-                    <div class="aspect-video">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/PzNcNuJZf3I" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-8">
-                        <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">阿秉精華</span>
-                        <h4 class="font-bold text-xl mt-2">在工商現場太大聲吵到仁勳!?</h4>
+                <div class="glass-card rounded-3xl overflow-hidden shadow-2xl">
+                    <div class="aspect-video"><iframe class="w-full h-full" src="https://www.youtube.com/embed/PzNcNuJZf3I" frameborder="0" allowfullscreen></iframe></div>
+                    <div class="p-6">
+                        <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">YouTube 長片精華</span>
+                        <h4 class="font-bold text-xl mt-1">【阿秉精華】在工商現場太大聲吵到仁勳!? -1/7 PC Dead by Daylight 黎明死線</h4>
                     </div>
                 </div>
-                <div class="glass-card rounded-3xl overflow-hidden">
-                    <div class="aspect-video">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/GIwYaqRaVjo" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-8">
-                        <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">阿秉精華</span>
-                        <h4 class="font-bold text-xl mt-2">打從娘胎沒說過謊 你們為啥不信我</h4>
+                <div class="glass-card rounded-3xl overflow-hidden shadow-2xl">
+                    <div class="aspect-video"><iframe class="w-full h-full" src="https://www.youtube.com/embed/GIwYaqRaVjo" frameborder="0" allowfullscreen></iframe></div>
+                    <div class="p-6">
+                        <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">YouTube 長片精華</span>
+                        <h4 class="font-bold text-xl mt-1">【阿秉精華】打從娘胎沒說過謊 你們為啥不信我 -1/13 PC Dead by Daylight 黎明死線</h4>
                     </div>
                 </div>
             </div>
@@ -123,72 +77,79 @@
 
         <section id="shorts-video" class="py-16">
             <div class="section-title">
-                <h3 class="text-3xl font-bold italic">Shorts</h3>
+                <h3 class="text-3xl font-bold italic uppercase tracking-wider">Shorts</h3>
                 <div class="section-line"></div>
             </div>
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass-card rounded-2xl overflow-hidden">
-                    <div class="aspect-[9/16]"><iframe class="w-full h-full" src="https://www.youtube.com/embed/UV87VXsEerQ" frameborder="0" allowfullscreen></iframe></div>
-                    <div class="p-4 text-center text-sm font-bold">場內打到場外</div>
+            <div id="shorts-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                 </div>
-                <div class="glass-card rounded-2xl overflow-hidden">
-                    <div class="aspect-[9/16]"><iframe class="w-full h-full" src="https://www.youtube.com/embed/5ZcH6PFZl_8" frameborder="0" allowfullscreen></iframe></div>
-                    <div class="p-4 text-center text-sm font-bold">感情不會散</div>
-                </div>
-                <div class="glass-card rounded-2xl overflow-hidden">
-                    <div class="aspect-[9/16]"><iframe class="w-full h-full" src="https://www.youtube.com/embed/Nd_bFPESOeU" frameborder="0" allowfullscreen></iframe></div>
-                    <div class="p-4 text-center text-sm font-bold">高金生會有報應</div>
-                </div>
-                <div class="glass-card rounded-2xl overflow-hidden">
-                    <div class="aspect-[9/16]"><iframe class="w-full h-full" src="https://www.youtube.com/embed/PPm9hBXNWUw" frameborder="0" allowfullscreen></iframe></div>
-                    <div class="p-4 text-center text-sm font-bold">很明顯我開了</div>
-                </div>
-            </div>
         </section>
 
-        <section id="ig-video" class="py-20 px-8 rounded-[3rem] bg-gradient-to-br from-purple-900/10 to-pink-900/10 border border-pink-500/20 my-10">
-            <div class="section-title">
-                <h3 class="text-3xl font-bold italic text-pink-500">Instagram</h3>
+        <section id="ig-video" class="py-20 px-8 rounded-[3rem] bg-gradient-to-br from-purple-900/10 to-pink-900/10 border border-pink-500/20 my-10 shadow-2xl text-center">
+            <div class="section-title text-left">
+                <h3 class="text-3xl font-bold italic text-pink-500 uppercase tracking-wider">Instagram</h3>
                 <div class="section-line-ig"></div>
             </div>
-            <div class="flex justify-center">
-                <div class="w-full max-w-[350px] glass-card rounded-3xl overflow-hidden">
-                    <div class="p-2">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSbXGSbjcz1/" data-instgrm-version="14"></blockquote>
-                    </div>
-                    <div class="p-6 text-center bg-black/20">
-                        <h4 class="font-bold text-pink-400">PUBG 絕地求生</h4>
-                        <p class="text-xs text-gray-400 mt-1">Reels 影音製作</p>
-                    </div>
+            <div class="inline-block w-full max-w-[350px] glass-card rounded-3xl overflow-hidden">
+                <div class="p-2"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSbXGSbjcz1/" data-instgrm-version="14"></blockquote></div>
+                <div class="p-6 bg-black/20">
+                    <h4 class="font-bold text-pink-400">PUBG 絕地求生精華</h4>
                 </div>
             </div>
         </section>
 
         <section id="pricing" class="py-24">
-            <h3 class="text-4xl font-bold mb-16 text-center">委託報價</h3>
+            <h3 class="text-4xl font-bold mb-16 text-center italic uppercase tracking-widest">Service Pricing</h3>
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="glass-card p-10 rounded-[2.5rem] text-center border-t-2 border-amber-500/30">
-                    <h4 class="text-xl font-bold text-amber-500 mb-4">長影片精華</h4>
-                    <div class="mb-6"><span class="text-4xl font-black">NT$ 200</span><span class="text-gray-400 text-sm"> / 分鐘</span></div>
-                    <p class="text-sm text-gray-400 leading-relaxed">綜藝字卡、動態特效、專業轉場與 BGM 編排。</p>
+                <div class="glass-card p-10 rounded-[2.5rem] border-t-4 border-amber-500/50">
+                    <h4 class="text-xl font-bold text-amber-500 mb-4 tracking-widest text-center">長影片精華</h4>
+                    <div class="mb-6 text-center"><span class="text-4xl font-black">NT$ 200</span><span class="text-gray-400 text-sm"> / 分鐘</span></div>
+                    <ul class="text-sm text-gray-400 space-y-3">
+                        <li>• 綜藝字卡、動態特效、動態追蹤設計</li>
+                        <li>• 專業轉場編排、精準 BGM 與音效對點</li>
+                        <li>• 遊戲精華、工商直播錄影剪輯</li>
+                    </ul>
                 </div>
-                <div class="glass-card p-10 rounded-[2.5rem] text-center border-t-2 border-pink-500/30">
-                    <h4 class="text-xl font-bold text-pink-500 mb-4">Shorts / Reels</h4>
-                    <div class="mb-6"><span class="text-4xl font-black">NT$ 350</span><span class="text-gray-400 text-sm"> / 每部</span></div>
-                    <p class="text-sm text-gray-400 leading-relaxed">快速節奏、高吸睛度剪輯，包含重點字幕與音效。</p>
+                <div class="glass-card p-10 rounded-[2.5rem] border-t-4 border-pink-500/50">
+                    <h4 class="text-xl font-bold text-pink-500 mb-4 tracking-widest text-center">Shorts / Reels</h4>
+                    <div class="mb-6 text-center"><span class="text-4xl font-black">NT$ 350</span><span class="text-gray-400 text-sm"> / 每部</span></div>
+                    <ul class="text-sm text-gray-400 space-y-3">
+                        <li>• 高吸睛度、快速節奏之短影音剪輯</li>
+                        <li>• 包含重點彩色字幕與環境音效增強</li>
+                        <li>• 適用於 YouTube Shorts / IG Reels</li>
+                    </ul>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer class="py-20 text-center border-t border-white/5">
-        <p class="mb-6 text-gray-500">Discord ID: <span class="text-white">ss1986</span></p>
-        <a href="https://discordapp.com/users/ss1986" target="_blank" class="bg-white text-black px-10 py-3 rounded-full font-black hover:bg-amber-500 hover:text-white transition-all transform hover:scale-105 shadow-xl">
-            START PROJECT
-        </a>
+        <p class="mb-6 text-gray-400 font-medium tracking-widest">DISCORD: <span class="text-white bg-white/10 px-4 py-1 rounded">ss1986</span></p>
+        <a href="https://discordapp.com/users/ss1986" target="_blank" class="bg-white text-black px-12 py-4 rounded-full font-black hover:bg-amber-500 hover:text-white transition-all transform hover:scale-110 shadow-xl inline-block">START PROJECT</a>
     </footer>
 
     <script async src="https://www.instagram.com/embed.js"></script>
+    <script>
+        // 這裡已經完全還原你原本提供的所有標題
+        const videoData = [
+            { title: "【MGL】什麼!!主播得了新型罕見疾病👀 #花奈悠漓 #vtuber #台v #shorts", id: "fFHx90Pw-C4" },
+            { title: "場內打到場外 #apex #taromochi_0502 #apexlegends #觀眾剪輯 #twitch", id: "UV87VXsEerQ" },
+            { title: "【阿秉精華】一人一顆閃光彈 感情不會散 - 1/12 PC Dead by Daylight 黎明死線#shorts #dbd #deadbydaylight #直播精華 #阿秉", id: "5ZcH6PFZl_8" },
+            { title: "【阿秉精華】高金生 是會有報應的!!! - 1/9 PC Dead by Daylight 黎明死線#shorts #dbd", id: "Nd_bFPESOeU" },
+            { title: "很明顯我開了 #shorts #DBD", id: "PPm9hBXNWUw" }
+        ];
+
+        const container = document.getElementById('shorts-container');
+        videoData.forEach(video => {
+            container.innerHTML += `
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col h-full">
+                    <div class="aspect-[9/16]">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/${video.id}" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="p-4 text-center text-sm font-bold text-gray-200 border-t border-white/5 full-title leading-relaxed">
+                        ${video.title}
+                    </div>
+                </div>`;
+        });
+    </script>
 </body>
 </html>
