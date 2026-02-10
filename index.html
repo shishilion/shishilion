@@ -7,22 +7,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
-            background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.95)), 
-                              url('bg.jpg');
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)), url('bg.jpg');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
             background-color: #0f172a;
             color: white; 
             font-family: 'Microsoft JhengHei', sans-serif;
-            margin: 0;
             scroll-behavior: smooth;
         }
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(245, 158, 11, 0.3);
         }
         .gradient-text {
             background: linear-gradient(to right, #fbbf24, #f59e0b);
@@ -30,8 +33,8 @@
             -webkit-text-fill-color: transparent;
         }
         .avatar-glow {
-            box-shadow: 0 0 30px rgba(245, 158, 11, 0.2);
-            border: 2px solid rgba(245, 158, 11, 0.4);
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
+            border: 2px solid rgba(245, 158, 11, 0.5);
         }
     </style>
 </head>
@@ -39,92 +42,113 @@
 
     <nav class="sticky top-0 z-50 p-6 flex justify-between items-center max-w-7xl mx-auto backdrop-blur-md">
         <h1 class="text-2xl font-bold tracking-tighter italic text-white uppercase">shishi<span class="text-amber-500">lion</span></h1>
-        <div class="hidden md:flex space-x-8 text-sm font-medium">
-            <a href="#about" class="hover:text-amber-400 transition">關於我</a>
-            <a href="#works" class="hover:text-amber-400 transition">作品展示</a>
-            <a href="#pricing" class="hover:text-amber-400 transition">委託報價</a>
-            <a href="https://discordapp.com/users/ss1986" target="_blank" class="bg-amber-600 px-6 py-2 rounded-full hover:bg-amber-700 transition shadow-lg text-white font-bold">立即私訊</a>
+        <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+            <a href="#about" class="hover:text-amber-400 transition">About</a>
+            <a href="#youtube" class="hover:text-amber-400 transition">YouTube</a>
+            <a href="#ig-reels" class="hover:text-amber-400 transition">Instagram</a>
+            <a href="#pricing" class="hover:text-amber-400 transition">Price</a>
+            <a href="https://discordapp.com/users/ss1986" target="_blank" class="bg-amber-600 px-6 py-2 rounded-full hover:bg-amber-700 transition shadow-lg shadow-amber-900/20">Contact Me</a>
         </div>
     </nav>
 
     <header class="py-24 text-center px-4">
-        <h2 class="text-5xl md:text-6xl font-black mb-8 tracking-tight">
-            正在自學剪輯的<br><span class="gradient-text">影像初學者</span>
+        <h2 class="text-5xl md:text-7xl font-black mb-6 tracking-tighter italic">
+            CLIPPER & <br><span class="gradient-text text-6xl md:text-8xl">EDITOR</span>
         </h2>
-        <p class="text-gray-400 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
-            目前專注於遊戲精華與 Reels 短影音製作。<br>
-            每一份委託，都是我累積經驗的寶貴機會。
-        </p>
+        <p class="text-gray-400 text-lg tracking-[0.2em] font-light">正在自學剪輯的影像初學者</p>
     </header>
 
     <section id="about" class="py-12 px-6">
-        <div class="max-w-4xl mx-auto glass-card p-8 md:p-12 rounded-[2.5rem] border-l-4 border-l-amber-500">
-            <div class="flex flex-col md:flex-row items-center gap-10">
-                <img src="avatar.jpg" alt="shishilion" class="w-40 h-40 rounded-3xl object-cover avatar-glow transform -rotate-2">
+        <div class="max-w-4xl mx-auto glass-card p-10 md:p-14 rounded-[3rem] border-l-8 border-l-amber-500">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <img src="avatar.jpg" alt="shishilion" class="w-48 h-48 rounded-[2rem] object-cover avatar-glow transform -rotate-3 hover:rotate-0 transition-all duration-500">
                 <div>
-                    <h3 class="text-3xl font-bold mb-4">關於 <span class="text-amber-500">shishilion</span></h3>
-                    <p class="text-gray-300 leading-relaxed mb-6">
-                        你好！我是一名對影像節奏充滿熱情的剪輯者。雖然還在學習階段，但我對於轉場細節與影片氛圍有著絕對的堅持。我擅長處理遊戲素材，並將其轉化為更具觀賞性的短影音內容。
+                    <h3 class="text-4xl font-black mb-6 italic">SHISHILION</h3>
+                    <p class="text-gray-300 leading-loose mb-8 text-lg">
+                        你好！我熱愛將瑣碎的遊戲畫面剪輯成富有節奏感的精華。雖然還在學習與累積經驗中，但我對於轉場與音效的細節有著極高的堅持。
                     </p>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-amber-500/10 text-amber-500 px-4 py-1 rounded-full text-xs font-bold border border-amber-500/20">#認真負責</span>
-                        <span class="bg-amber-500/10 text-amber-500 px-4 py-1 rounded-full text-xs font-bold border border-amber-500/20">#遊戲 Reels</span>
-                        <span class="bg-amber-500/10 text-amber-500 px-4 py-1 rounded-full text-xs font-bold border border-amber-500/20">#高度配合</span>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-amber-500 text-slate-950 px-5 py-1.5 rounded-full text-xs font-black uppercase tracking-widest">#遊戲精華</span>
+                        <span class="bg-white/10 text-white px-5 py-1.5 rounded-full text-xs font-bold border border-white/20 uppercase tracking-widest">#REELS製作</span>
+                        <span class="bg-white/10 text-white px-5 py-1.5 rounded-full text-xs font-bold border border-white/20 uppercase tracking-widest">#高度配合</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="works" class="py-20 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex items-center gap-4 mb-12">
-                <h3 class="text-3xl font-bold italic uppercase tracking-tighter">Latest <span class="text-amber-500">Reels</span></h3>
-                <div class="h-[1px] flex-grow bg-white/10"></div>
+    <section id="youtube" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="flex items-center gap-6 mb-12">
+            <h3 class="text-3xl font-black italic uppercase tracking-tighter">Youtube <span class="text-amber-500">Works</span></h3>
+            <div class="h-[1px] flex-grow bg-gradient-to-r from-amber-500/50 to-transparent"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="glass-card p-5 rounded-[2.5rem]">
+                <div class="aspect-video">
+                    <iframe class="w-full h-full rounded-2xl shadow-inner" src="https://www.youtube.com/embed/F69GgU8E24I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="mt-6 flex justify-between items-center px-2">
+                    <span class="text-amber-500 font-bold tracking-tighter uppercase text-sm">Portfolio 01</span>
+                    <h4 class="font-bold text-gray-200 uppercase text-xs tracking-widest">YouTube Highlight</h4>
+                </div>
             </div>
             
-            <div class="flex justify-center">
-                <div class="glass-card p-4 rounded-[2.5rem] w-full max-w-[500px]">
-                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DSbXGSbjcz1/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:transparent; border:0; margin: 1px; width:calc(100% - 2px);"></blockquote>
-                </div>
+            </div>
+    </section>
+
+    <section id="ig-reels" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="flex items-center gap-6 mb-12">
+            <div class="h-[1px] flex-grow bg-gradient-to-l from-amber-500/50 to-transparent"></div>
+            <h3 class="text-3xl font-black italic uppercase tracking-tighter">Latest <span class="text-amber-500">Reels</span></h3>
+        </div>
+        
+        <div class="flex justify-center">
+            <div class="glass-card p-6 rounded-[3rem] w-full max-w-[500px]">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSbXGSbjcz1/" data-instgrm-version="14" style="background:transparent; border:0; margin:1px; width:100%;"></blockquote>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="py-20 px-6">
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-3xl font-bold text-center mb-12">委託報價 <span class="text-amber-500">Pricing</span></h3>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass-card p-8 rounded-3xl text-center">
-                    <h4 class="text-xl font-bold mb-4">短影音剪輯</h4>
-                    <p class="text-4xl font-black text-amber-500 mb-4">NT$ 200↑</p>
-                    <ul class="text-gray-400 text-sm space-y-2">
-                        <li>適合 Reels / Shorts / TikTok</li>
-                        <li>包含字幕與基本轉場</li>
-                        <li>配合社群流行節奏</li>
-                    </ul>
-                </div>
-                <div class="glass-card p-8 rounded-3xl text-center">
-                    <h4 class="text-xl font-bold mb-4">遊戲精華剪輯</h4>
-                    <p class="text-4xl font-black text-amber-500 mb-4">私訊洽詢</p>
-                    <ul class="text-gray-400 text-sm space-y-2">
-                        <li>長篇素材精煉</li>
-                        <li>客製化字體特效</li>
-                        <li>依素材長度與複雜度報價</li>
-                    </ul>
-                </div>
+    <section id="pricing" class="py-24 px-6 max-w-5xl mx-auto">
+        <h3 class="text-4xl font-black text-center mb-16 italic tracking-tighter">委託報價 <span class="text-amber-500">PRICING</span></h3>
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="glass-card p-12 rounded-[3rem] text-center border-t-8 border-t-amber-500">
+                <h4 class="text-2xl font-black mb-4 uppercase tracking-tighter">Shorts / Reels</h4>
+                <p class="text-5xl font-black text-amber-500 mb-8">NT$ 200 <span class="text-lg text-gray-500 font-normal">UP</span></p>
+                <ul class="text-gray-400 text-sm space-y-4 mb-8 text-left border-t border-white/10 pt-8">
+                    <li class="flex items-center gap-2"><span class="text-amber-500">✔</span> 適合 60 秒內短影音</li>
+                    <li class="flex items-center gap-2"><span class="text-amber-500">✔</span> 包含動態字幕與流行轉場</li>
+                    <li class="flex items-center gap-2"><span class="text-amber-500">✔</span> 高度配合節奏卡點</li>
+                </ul>
+            </div>
+            <div class="glass-card p-12 rounded-[3rem] text-center border-t-8 border-t-white/20">
+                <h4 class="text-2xl font-black mb-4 uppercase tracking-tighter">Gaming Highlight</h4>
+                <p class="text-5xl font-black text-white mb-8 italic text-3xl">私訊洽詢</p>
+                <ul class="text-gray-400 text-sm space-y-4 mb-8 text-left border-t border-white/10 pt-8">
+                    <li class="flex items-center gap-2"><span class="text-white">✔</span> 遊戲長素材精華剪輯</li>
+                    <li class="flex items-center gap-2"><span class="text-white">✔</span> 客製化特效與綜藝字體</li>
+                    <li class="flex items-center gap-2"><span class="text-white">✔</span> 依影片長度評估</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center border-t border-white/5">
-        <p class="mb-6 text-gray-500">Discord ID: <span class="text-white bg-white/5 px-4 py-2 rounded-lg">ss1986</span></p>
-        <a href="https://discordapp.com/users/ss1986" target="_blank" class="inline-block bg-white text-black px-12 py-4 rounded-full font-bold hover:bg-amber-500 hover:text-white transition-all transform hover:scale-105 shadow-2xl">
-            聯絡委託
+    <footer class="py-24 text-center border-t border-white/5 bg-black/20">
+        <p class="mb-8 text-gray-500 font-medium tracking-widest uppercase">Discord: ss1986</p>
+        <a href="https://discordapp.com/users/ss1986" target="_blank" class="inline-block bg-white text-black px-16 py-5 rounded-full font-black text-lg hover:bg-amber-500 hover:text-white transition-all transform hover:scale-110 shadow-[0_0_50px_rgba(255,255,255,0.1)]">
+            LET'S WORK TOGETHER
         </a>
-        <p class="mt-16 text-gray-700 text-[10px] tracking-widest uppercase">© 2026 SHISHILION</p>
+        <p class="mt-20 text-gray-700 text-[10px] tracking-[0.5em] uppercase">© 2026 SHISHILION CREATIVE PORTFOLIO</p>
     </footer>
 
-    <script async src="//www.instagram.com/embed.js"></script>
+    <script async src="https://www.instagram.com/embed.js"></script>
+    <script>
+        window.onload = function() {
+            if (window.instgrm) {
+                window.instgrm.Embeds.process();
+            }
+        };
+    </script>
 </body>
 </html>
